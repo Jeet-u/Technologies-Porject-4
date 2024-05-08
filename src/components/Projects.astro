@@ -1,0 +1,64 @@
+---
+import NEXT from '../components/icons/NEXT.astro';
+import TAILWIND from '../components/icons/TAILWIND.astro';
+import SCRIPTS from '../components/icons/SCRIPTS.astro';
+import REACT from '../components/icons/REACT.astro';
+
+const TAGS = {
+  NEXT: {
+
+    name: 'Next.js',
+    class: 'bg-[#004D40] text-black',
+    icon: NEXT,
+  },
+
+  TAILWIND: {
+    name: 'Tailwind',
+    class: 'bg-[#003159] text-white',
+    icon: TAILWIND,
+
+  },
+
+  SCRIPTS: {
+    name: 'JavaScript',
+    class: 'bg-[#795548] text-white text-yellow-200',
+    icon: SCRIPTS,
+  },
+
+  REACT: {
+    name: 'React',
+    class: 'bg-[#455A64] text-[#00d8ff]',
+    icon: REACT,
+  },
+}
+
+
+const PROJECTS = [
+  {
+    title: 'SVGL - A beautiful library',
+    description: 'Eu sem integer vitae justo eget magna fermentum iaculis eu non diam phasellus vestibulum lorem sed risus ultricies tristique nulla.',
+    link: 'https://jeet-u.github.io/blog-coffe/',
+    github: 'https://github.com/pheralb/svgl',
+    image: 'untitle.png',
+    tags: [TAGS.NEXT, TAGS.TAILWIND, TAGS.SCRIPTS, TAGS.REACT]
+  }
+]
+---
+
+{
+PROJECTS.map(({image, title, description, tags }) => (
+<article>
+  <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
+  <p class="text-lg mb-4 text-pretty">{description}</p>
+  <ul class="flex gap-x-4 flex-row">
+    {tags.map((tag) =>(
+    <li>
+      <span class={`flex gap-x-2 rounded-full items-center text-xs mb-5 ${tag.class} py-1 px-2`}>
+        <tag.icon class="rounded-full size-4"></tag.icon>{tag.name}
+      </span>
+    </li>
+    ))}
+  </ul>
+  <img  class="rounded shadow-2xl shadow-while/10" alt={`Project Screenshot ${image}`} src={image}/>
+</article>
+))}

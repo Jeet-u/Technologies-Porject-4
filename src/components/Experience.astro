@@ -1,0 +1,37 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+
+const EXPERIENCE =[
+  {
+    date: 'February 2022',
+    title: 'Aplication IU code in Tailwind Css',
+    description: 'Get accesss to over 20+ pages including a dashboard layout, charts, board ,calendar, and pre-order E-commerce & Marketing pages',
+    link: '#',
+  },
+  {
+    date: 'March 2022',
+    title: 'Marketing IU design in Figma',
+    description:'All of the pages and components are first designer in Figma and we keep a parity between the two versions wven as we update the project',
+    link: '#',
+  },
+  {
+    date: 'April 2022',
+    title: 'E-Commerce IU code in Tailwind Css',
+    description:
+    'Get started with dozens of web components and interactive elements built on top of Tailwind Css',
+    link: '#'
+  },
+]
+---
+
+
+<ol class="relative border-s border-gray-200 dark:border-gray-700">
+  {
+  EXPERIENCE.map(experiencie => (
+  <li class="mb-10 ms-4">
+    <ExperienceItem {...experiencie} />
+  </li>
+
+  ))
+  }
+</ol>

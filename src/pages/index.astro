@@ -1,0 +1,114 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Badge from '../components/Badge.astro';
+
+import Social from '../components/Social.astro';
+import LinkeDIN from '../components/icons/LinkeDIN.astro';
+import Github from '../components/icons/Github.astro';
+import Email from '../components/icons/Email.astro';
+import Experience from '../components/Experience.astro';
+import SectionContainer from '../components/SectionContainer.astro';
+import Briefcase from '../components/icons/briefcase.astro';
+import ExperienceItem from '../components/ExperienceItem.astro';
+import Card from '../components/Card.astro';
+import CodeIcon from '../components/icons/CodeIcon.astro';
+import Youtube from '../components/icons/Youtube.astro';
+import Xtwitter from '../components/icons/Xtwitter.astro';
+import Projects from '../components/Projects.astro';
+---
+
+<Layout title="Porfolio Jeet-u - Web Designer and Developer With 2 years experience."
+        description="Hire Jeet-u to create your web or mobile application. Web developer. Specialized in creating unique applications">
+  <main class="px-4">
+    <SectionContainer class="py-44 pb-22">
+      <img class="rounded-full w-[25rem] h-[25rem] mb-10"
+           alt="logo"
+           src="photo.png"/>
+      <h1 class="text-white
+                 text-4xl
+                 font-bold
+                 flex
+                 pb-4
+                 md:text-4xl
+                 flex-row
+                 gap-x-4">Hey, I'm Jeethu<a href="https://www.linkedin.com/in/jeet-u1l"
+                                            target="__blank"
+                                            rel="noopener"
+                                            class="flex
+                                                  justify-center
+                                                  items-center
+                                                  "><Badge>Available To Work</Badge></div></a></h1>
+
+
+        <h2 class="text-white
+                  text-2xl
+                  opacity-90
+                   text-wrap
+                   max-w-96">
+          <span class="text-yellow-200/90">
+            Web designer and Developer</span> based in <span class="text-red-200/90">Texas, United States</span>. <br/> I specialize in FULL STACK development, UI Design, Responsive Web Designand Visual Development</h2>
+
+
+        <nav class="flex gap-4 mt-4 flex-wrap">
+            <Social  href="https://www.linkedin.com/in/jeet-u1l">
+              <LinkeDIN class="size-4 md:size-8" />
+              LinkedIn
+            </Social>
+
+
+            <!-- Github -->
+
+            <Social href="https://www.github.com/Jeet-u">
+              <Github class="size-4 md:size-8" />
+              GitHub
+            </Social>
+            <!-- Youtube -->
+
+            <Social href="https://www.github.com/Jeet-u">
+              <Youtube class="size-4 md:size-8" />
+              Youtube
+            </Social>
+
+            <!-- X -->
+
+            <Social href="https://www.github.com/Jeet-u">
+              <Xtwitter class="size-3 md:size-5" />
+              Twitter
+            </Social>
+
+            <!-- Gmail -->
+
+            <Social href="mailto:jeet.u1lnit@gmail.com">
+              <Email class="size-2 md:size-4" />
+              jeet.u1lnit@gmail.com
+            </Social>
+        </nav>
+
+    </SectionContainer>
+        <!-- <SectionContainer>
+             <Experience />
+             </SectionContainer> -->
+    <SectionContainer id="experience">
+      <h2
+        class="flex gap-x-2 items-center text-4xl font-semibold mb-10 opacity-90">
+        <Briefcase class="w-10 h-10" />
+        Work Experience
+      </h2>
+
+      <Experience />
+
+    </SectionContainer>
+
+
+    <SectionContainer id="experience">
+      <h2
+        class="flex gap-x-2 items-center text-4xl font-semibold mb-10 opacity-90">
+        <CodeIcon class="w-10 h-10" />
+        Projects
+      </h2>
+
+      <Projects />
+
+    </SectionContainer>
+  </main>
+</Layout>
