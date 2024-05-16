@@ -4,5 +4,5 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   integrations: [tailwind()],
   site: 'https://astronaut.github.io',
-  base: '/porfolio-bg/'
+  base: '/Technologies-Porject-4/'
 });
